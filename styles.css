@@ -31,9 +31,12 @@ nav a:hover{
     margin: 0 auto;
     color: #333;
 }
-.galler-grid{
+.gallery-grid{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 12px;
+    overflow: hidden;
 }
 .gallery h2 {
     text-align: center;
@@ -42,10 +45,57 @@ nav a:hover{
     color: #333;
 }
 
-img {
-    width: 50%;
+.gallery img {
+    justify-self: center;
+    width: 45%;
     height: auto;
-    display: block;
-    border-radius: 8px;
+    object-fit: cover;
+    border-radius: 0px;
     padding: 10px;
+    display: block;
+    border: 1px solid transparent;
+    border-color: rgb(209, 179, 6);
+}
+.Title{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 1.5rem;
+}
+hr{
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+.marco{
+    
+    padding:70px;
+    background-color: #f0f0f0;
+    border-radius:0px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.7);
+    overflow:hidden;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border: 1px solid transparent;
+    border-color: rgb(209, 179, 6);
+}
+a{
+    padding: 20px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+    text-decoration:wavy;
+    font-family:
+
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+Roboto,
+Helvetica,
+Arial,
+sans-serif;
+
 }
