@@ -1,8 +1,12 @@
 body{
-    background: lightgrey;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: white;
+    background: #f0f0f0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
     margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 header{
     display: flex;
@@ -54,13 +58,70 @@ nav a:hover{
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.photo-card {
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: calc(var(--i, 0) * 0.1s);
+    opacity: 0;
+}
+
 .photo-placeholder {
     width: 100%;
     aspect-ratio: 4 / 3;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     display: flex;
     align-items: center;
     justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.photo-card:nth-child(2) .photo-placeholder {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.photo-card:nth-child(3) .photo-placeholder {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.photo-card:nth-child(4) .photo-placeholder {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.photo-card:nth-child(5) .photo-placeholder {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.photo-card:nth-child(6) .photo-placeholder {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+}
+
+.photo-card:nth-child(7) .photo-placeholder {
+    background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);
+}
+
+.photo-card:nth-child(8) .photo-placeholder {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.photo-card:nth-child(9) .photo-placeholder {
+    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+}
+
+.photo-card:nth-child(10) .photo-placeholder {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.photo-card:nth-child(11) .photo-placeholder {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .photo-icon {
