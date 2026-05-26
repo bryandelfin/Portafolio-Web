@@ -31,7 +31,10 @@ nav a:hover{
     margin: 0 auto;
     color: #333;
 }
-
+.galler-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 .gallery h2 {
     text-align: center;
     font-size: 2rem;
@@ -39,115 +42,10 @@ nav a:hover{
     color: #333;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.photo-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.photo-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.photo-card {
-    animation: fadeInUp 0.6s ease forwards;
-    animation-delay: calc(var(--i, 0) * 0.1s);
-    opacity: 0;
-}
-
-.photo-placeholder {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.photo-card:nth-child(2) .photo-placeholder {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-}
-
-.photo-card:nth-child(3) .photo-placeholder {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.photo-card:nth-child(4) .photo-placeholder {
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-}
-
-.photo-card:nth-child(5) .photo-placeholder {
-    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-}
-
-.photo-card:nth-child(6) .photo-placeholder {
-    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
-}
-
-.photo-card:nth-child(7) .photo-placeholder {
-    background: linear-gradient(135deg, #fccb90 0%, #d57eeb 100%);
-}
-
-.photo-card:nth-child(8) .photo-placeholder {
-    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
-}
-
-.photo-card:nth-child(9) .photo-placeholder {
-    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
-}
-
-.photo-card:nth-child(10) .photo-placeholder {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-}
-
-.photo-card:nth-child(11) .photo-placeholder {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-}
-
-.photo-icon {
-    font-size: 3rem;
-    opacity: 0.5;
-}
-
-.photo-desc {
-    padding: 16px;
-    margin: 0;
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.5;
-}
-
-@media (max-width: 900px) {
-    .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 560px) {
-    .gallery-grid {
-        grid-template-columns: 1fr;
-    }
-}
-.Title{
-    color: white;
+img {
+    width: 50%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    padding: 10px;
 }
