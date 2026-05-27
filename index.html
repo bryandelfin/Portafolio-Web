@@ -3,66 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de fotografía de Bryan Garcés">
     <link rel="stylesheet" href="styles.css">
-    <title>Portafolio Web</title>
+    <title>Bryan Garcés · Fotografía</title>
 </head>
 <body>
-    <header>
-        <h3 class="Title">Galería de Fotos</h3>
-        <h3 class="Title">Autoría: Bryan Garcés</h3>
-    </header>
+
+    <div id="loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-content">
+            <span class="nav-logo">BG</span>
+            <div class="nav-links">
+                <a href="#hero">Inicio</a>
+                <a href="#gallery">Galería</a>
+                <button id="themeToggle" class="theme-btn" aria-label="Cambiar tema">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </button>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Bryan Garcés Herrera</h1>
+            <p class="hero-subtitle">Fotografía · Bogotá · Colombia</p>
+            <a href="#gallery" class="hero-cta">Explorar Galería</a>
+        </div>
+    </section>
 
     <main>
         <section id="gallery" class="gallery">
-            <h2 style="margin-top: 5px;">Galería</h2>
-            <div class="gallery-grid">
-                <div class="marco">
-                <img src="images/audifonos.jpg" alt="Descripción de la fotografía">
-                <a>Serie fotográfica: Airpods</a>
+            <div class="gallery-header">
+                <h2>Galería</h2>
+                <div class="gallery-controls">
+                    <div class="filter-btns">
+                        <button class="filter-btn active" data-filter="all">Todas</button>
+                        <button class="filter-btn" data-filter="ciudad">Ciudad</button>
+                        <button class="filter-btn" data-filter="producto">Producto</button>
+                    </div>
                 </div>
-                <hr style="color:black">
-                <div class="marco">
-                <img src="images/reloj1.png" alt="Descripción de la fotografía">
-                <a>Serie fotográfica: Reloj Q&Q</a>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+
+                <div class="marco" data-category="producto">
+                    <div class="marco-img">
+                        <img src="images/audifonos.jpg" alt="Serie fotográfica: Airpods" loading="lazy">
+                        <div class="marco-overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="marco-info">
+                        <span class="marco-cat">Producto</span>
+                        <a>Serie fotográfica: Airpods</a>
+                    </div>
                 </div>
-                <hr style="color:black">
-                <div class="marco">
-                <img src="images/reloj2.jpg" alt="Descripción de la fotografía">
-                <a>Serie fotográfica: Airpods</a>
+
+                <div class="marco" data-category="producto">
+                    <div class="marco-img">
+                        <img src="images/reloj1.png" alt="Serie fotográfica: Reloj Q&Q" loading="lazy">
+                        <div class="marco-overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="marco-info">
+                        <span class="marco-cat">Producto</span>
+                        <a>Serie fotográfica: Reloj Q&Q</a>
+                    </div>
                 </div>
-                <hr style="color:black">
-                <div class="marco">
-                <img src="images/bolivar.jpg" alt="Descripción de la fotografía">
-                <a>Sesion de fotos en el Centro de Bogotá: Estatua de Simón Bolívar</a>
+
+                <div class="marco" data-category="producto">
+                    <div class="marco-img">
+                        <img src="images/reloj2.jpg" alt="Serie fotográfica: Airpods" loading="lazy">
+                        <div class="marco-overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="marco-info">
+                        <span class="marco-cat">Producto</span>
+                        <a>Serie fotográfica: Airpods</a>
+                    </div>
                 </div>
-                <hr style="color:black">
-                <div class="marco">
-                <img src="images/Capilla.jpg" alt="Descripción de la fotografía">
-                <a>Sesion de fotos en el Centro de Bogotá: Cúpula del Colegio Mayor San Bartolomé</a>
+
+                <div class="marco" data-category="ciudad">
+                    <div class="marco-img">
+                        <img src="images/bolivar.jpg" alt="Estatua de Simón Bolívar" loading="lazy">
+                        <div class="marco-overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="marco-info">
+                        <span class="marco-cat">Bogotá</span>
+                        <a>Sesión de fotos en el Centro de Bogotá: Estatua de Simón Bolívar</a>
+                    </div>
                 </div>
-                <hr style="color:black">
-                <div class="marco">
-                <img src="images/escultura.jpg" alt="Descripción de la fotografía">
-                <a>Sesion de fotos en el Centro de Bogotá: Templete al Libertador</a>
+
+                <div class="marco" data-category="ciudad">
+                    <div class="marco-img">
+                        <img src="images/Capilla.jpg" alt="Cúpula del Colegio Mayor San Bartolomé" loading="lazy">
+                        <div class="marco-overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="marco-info">
+                        <span class="marco-cat">Bogotá</span>
+                        <a>Sesión de fotos en el Centro de Bogotá: Cúpula del Colegio Mayor San Bartolomé</a>
+                    </div>
                 </div>
-                <hr style="color:black">
-                <div class="marco">
-                <img src="images/Iglesia.jpg" alt="Descripción de la fotografía">
-                <a>Sesion de fotos en el Centro de Bogotá: Conjunto Residencial Calle de Sol, Estilo Neogótico</a>
+
+                <div class="marco" data-category="ciudad">
+                    <div class="marco-img">
+                        <img src="images/escultura.jpg" alt="Templete al Libertador" loading="lazy">
+                        <div class="marco-overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="marco-info">
+                        <span class="marco-cat">Bogotá</span>
+                        <a>Sesión de fotos en el Centro de Bogotá: Templete al Libertador</a>
+                    </div>
                 </div>
-                <hr style="color:black">
-                <div class="marco">
-                <img src="images/nequetemba.jpg" alt="Descripción de la fotografía">
-                <a>Sesion de fotos en el Centro de Bogotá: Iglesia de San Francisco y Edificio Nemqueteba</a>
+
+                <div class="marco" data-category="ciudad">
+                    <div class="marco-img">
+                        <img src="images/Iglesia.jpg" alt="Conjunto Residencial Calle de Sol" loading="lazy">
+                        <div class="marco-overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="marco-info">
+                        <span class="marco-cat">Bogotá</span>
+                        <a>Sesión de fotos en el Centro de Bogotá: Conjunto Residencial Calle de Sol, Estilo Neogótico</a>
+                    </div>
                 </div>
-                <hr style="color:black">
-                <div class="marco">
-                <img src="images/tiempo.jpg" alt="Descripción de la fotografía">
-                <a>Sesion de fotos en el Centro de Bogotá: Reloj del edificio EL TIEMPO</a>
+
+                <div class="marco" data-category="ciudad">
+                    <div class="marco-img">
+                        <img src="images/nequetemba.jpg" alt="Iglesia de San Francisco y Edificio Nemqueteba" loading="lazy">
+                        <div class="marco-overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="marco-info">
+                        <span class="marco-cat">Bogotá</span>
+                        <a>Sesión de fotos en el Centro de Bogotá: Iglesia de San Francisco y Edificio Nemqueteba</a>
+                    </div>
                 </div>
+
+                <div class="marco" data-category="ciudad">
+                    <div class="marco-img">
+                        <img src="images/tiempo.jpg" alt="Reloj del edificio EL TIEMPO" loading="lazy">
+                        <div class="marco-overlay">
+                            <span>Ver más</span>
+                        </div>
+                    </div>
+                    <div class="marco-info">
+                        <span class="marco-cat">Bogotá</span>
+                        <a>Sesión de fotos en el Centro de Bogotá: Reloj del edificio EL TIEMPO</a>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Bryan Garcés Herrera</p>
+        </div>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-prev">&#10094;</span>
+        <span class="lightbox-next">&#10095;</span>
+        <div class="lightbox-content">
+            <img id="lightboxImg" src="" alt="">
+            <p id="lightboxCaption"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
